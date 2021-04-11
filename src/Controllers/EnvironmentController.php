@@ -73,7 +73,7 @@ class EnvironmentController extends Controller
 
         event(new EnvironmentSaved($input));
         
-        if (isset($errors) || !$code){
+        if (isset($errors)){
             return view('vendor.installer.environment-classic', compact('errors', 'envConfig'));
         }
         // فيريفيكاسيون كود
@@ -108,7 +108,7 @@ class EnvironmentController extends Controller
             ]);
         }
         
-        if (isset($errors) || !$code){
+        if (isset($errors)){
             return view('vendor.installer.environment-classic', compact('errors', 'envConfig'));
         }
         // فيريفيكاسيون كود
